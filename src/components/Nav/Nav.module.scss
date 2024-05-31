@@ -1,7 +1,85 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+}
+
+
+.navbar__item {
+  margin-right: 1rem;
+}
+.navbar__burger{
+  display: none;
+}
+@media screen and (max-width: 820px) {
+  .navbar__burger{
+    display: block ;
+  }
+}
+.navbar__link {
+  color: #fff !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login {
+  color: #f90;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 16px;
+  top: 16px;
+}
+
+.bm-burger-bars {
+  background: #fff;
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  background: #333;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: #f90;
+}
+
 .navbar{
   &__list{
     display: flex;
     align-items: center;
+    @media screen and (max-width:820px ) {
+      display: none;
+    }
   }
   &__item{
     margin-right: 45px;
