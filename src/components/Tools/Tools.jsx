@@ -3,7 +3,7 @@ import CodeEditor from "../CodeEditor/CodeEditor.jsx";
 
 const Tools = () => {
     return (
-        <div className={classes.Tools} style={{height: '80vh', backgroundColor: "white", width: '100%'}}>
+        <div className={classes.Tools} style={{height: '80  vh', backgroundColor: "white", width: '100%'}}>
             <section className='container conv2'>
                 <aside className={classes.text__cont}>
                     <h3>Самые мощные и простые в использовании API <br/>в мире</h3>
