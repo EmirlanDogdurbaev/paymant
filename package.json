@@ -13,6 +13,10 @@
     "@monaco-editor/react": "^4.6.0",
     "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.7.2",
+<<<<<<< HEAD
+=======
+    "classnames": "^2.5.1",
+>>>>>>> 14414aa8a1782b8b03f53f59a48e67183a1929bf
     "framer-motion": "^11.2.10",
     "monaco-editor": "^0.49.0",
     "react": "^18.2.0",
@@ -27,10 +31,7 @@
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+
     "vite": "^5.2.0"
   }
 }
