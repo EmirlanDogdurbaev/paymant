@@ -1,5 +1,6 @@
-import React from 'react'
+
 import classes from './Comments.module.scss'
+// eslint-disable-next-line react/prop-types
 export default function Comment({data}) {
   return (
     <div className={classes.Comment}>
