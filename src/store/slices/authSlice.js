@@ -1,30 +1,35 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import axios from 'axios';
-import {BASE_API} from "../api.js";
 
+export const api = 'http://192.168.212.149:8000/api/v1';
 
-export const signup = createAsyncThunk('auth/register', async ({username, password, email}) => {
+export const signup = createAsyncThunk('/user/register', async ({firstname, password, email, lastname, phone}) => {
     // eslint-disable-next-line no-useless-catch
     try {
-        const response = await axios.post(`${BASE_API}/register`, {username, password, email});
+        const response = await axios.post(`${api}/user/register`, { password, email});
+
+        console.log(response.data.token);
         const token = response.data.access_token;
         localStorage.setItem('access_token', token);
-        localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         return {email, token};
+
     } catch (error) {
         throw error;
     }
 });
 
 
-export const login = createAsyncThunk('auth/login', async ({password, email}) => {
+export const login = createAsyncThunk('/login', async ({password, email}) => {
     // eslint-disable-next-line no-useless-catch
     try {
-        const response = await axios.post(`${BASE_API}/login`, {password, email});
-        const token = response.data.access_token;
+        const response = await axios.post(`${api}/user/login`, {password, email});
+        console.log(response.data);
+        const token = response.data;
         localStorage.setItem('access_token', token);
         localStorage.setItem('email', email);
+        localStorage.setItem('role', response.data.role);
+
         return {email, token};
     } catch (error) {
         throw error;
@@ -35,7 +40,7 @@ export const refreshToken = createAsyncThunk('auth/refreshToken', async () => {
     // eslint-disable-next-line no-useless-catch
     try {
         const refreshToken = localStorage.getItem('refresh_token');
-        const response = await axios.post(`${BASE_API}/refresh_token`, {refreshToken});
+        const response = await axios.post(`${api}/refresh_token`, {refreshToken});
         const newToken = response.data.access_token;
         localStorage.setItem('refresh_token', newToken);
         return newToken;
@@ -73,6 +78,7 @@ const authSlice = createSlice({
                 state.status = 'succeeded';
                 state.token = action.payload.token;
                 state.email = action.payload.email;
+
             })
             .addCase(login.rejected, (state, action) => {
                 state.status = 'failed';

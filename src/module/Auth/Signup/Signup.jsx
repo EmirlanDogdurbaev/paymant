@@ -4,7 +4,6 @@ import {signup} from "../../../store/slices/authSlice.js";
 
 const Signup = () => {
     const dispatch = useDispatch();
-    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
     const loading = useSelector((state) => state.auth.status === "loading");
@@ -12,7 +11,7 @@ const Signup = () => {
     const token = useSelector((state) => state.auth.token);
 
     const handleSignup = () => {
-        dispatch(signup({username, password, email}));
+        dispatch(signup({password, email}));
     };
 
     if (token) {
@@ -20,15 +19,10 @@ const Signup = () => {
     }
 
     return (
-        <div>
+        <div style={{ marginTop: "48px" }}>
             <div>
                 <h2>Signup</h2>
-                <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
+
                 <input
                     type="password"
                     placeholder="Password"
