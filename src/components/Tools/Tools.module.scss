@@ -1,0 +1,80 @@
+$blackColor:  #161C2D; ;
+
+
+.Tools {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > section {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+
+
+    .text__cont {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      > h3 {
+        color: $blackColor;
+        font-family: Open Sans;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        letter-spacing: -1.7999999523162842px;
+        text-align: left;
+      }
+
+      h5 {
+        font-family: Open Sans;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -0.5px;
+        text-align: left;
+
+      }
+
+      p {
+        font-family: Open Sans;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: -0.20000000298023224px;
+        text-align: left;
+      }
+
+      span{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        h6 {
+          color: $blackColor;
+          font-family: Open Sans;
+          font-size: 21px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.5px;
+          text-align: left;
+
+        }
+
+        p {
+          font-family: Open Sans;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 29px;
+          letter-spacing: -0.20000000298023224px;
+          text-align: left;
+        }
+
+      }
+    }
+  }
+
+}

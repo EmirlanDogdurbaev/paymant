@@ -1,0 +1,61 @@
+.editor-container {
+    height: 570px;
+    width: 700px;
+    position: relative;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: black;
+
+    position: relative;
+}
+
+.editor-container.fullscreen {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: none;
+    border-radius: 0;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 10px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    z-index: 100;
+}
+
+.toolbar-button {
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar-button:hover {
+    background-color: #777;
+}
+
+.copy-message {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

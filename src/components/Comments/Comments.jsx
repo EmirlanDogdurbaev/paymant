@@ -1,4 +1,3 @@
-import React from 'react'
 import Comment from './Comment'
 import classes from './Comments.module.scss'
 import { Link } from 'react-router-dom'

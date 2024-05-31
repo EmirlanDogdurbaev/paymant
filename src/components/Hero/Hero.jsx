@@ -1,4 +1,3 @@
-import React from 'react';
 import cl from "./Hero.module.scss";
 import { motion } from "framer-motion";
 import tablet from "../../assets/static/images/tablet.png";
