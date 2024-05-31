@@ -1,6 +1,25 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic");
+
+*, ::after, *::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+body{
+  font-family: "Open-Sans", sans-serif;
+}
+
+.container{
+  max-width: 1350px;
+  padding: 0 10px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
