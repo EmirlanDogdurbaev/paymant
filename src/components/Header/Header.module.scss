@@ -1,6 +1,10 @@
 
 .Header {
   margin-top: 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5000;
 
   &__inner {
     display: flex;

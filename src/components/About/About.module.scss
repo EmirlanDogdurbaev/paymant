@@ -1,0 +1,35 @@
+.About{
+    margin-bottom: 60px;
+    &__inner{
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 120px;
+    }
+
+    &__title{
+        color: #161C2D;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 25px;
+    }
+    &__text{
+        font-size: 19px;
+        line-height: 32px;
+        color: #161C2D;
+
+    }
+
+    &__content{
+        width: 420px;
+    }
+
+    &__card{
+        position: absolute;
+        left: 0;
+        transform: translateX(-80%);
+        top: 2px;
+    }
+}
