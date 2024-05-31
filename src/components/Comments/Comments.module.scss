@@ -17,9 +17,12 @@
     text-decoration: none;
     margin-top: 50px;
   }
+  h1{
+    margin: 20px;
+  }
   .Comment {
     background-color: #fff;
-    width: 60%;
+    width: 50%;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -31,6 +34,10 @@
     }
     .info {
       margin-left: 20px;
+      span{
+        color: grey;
+
+      }
     }
   }
   .Comment:nth-of-type(2) {
@@ -43,4 +50,28 @@
   .Comment:hover {
     opacity: 1;
   }
+}
+
+@media (max-width:600px) {
+    .Comments{
+        h1{
+    font-size: 20px;
+
+        }
+        .Comment{
+            flex-direction: column;
+            img{
+                width: 40px;
+                margin-bottom: 20px;
+            }
+            .info{
+                p{
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
 }
