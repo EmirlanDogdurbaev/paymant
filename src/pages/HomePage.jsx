@@ -12,7 +12,6 @@ const HomePage = () => {
             <Hero/>
             <Tools/>
             <HowItWorks/>
-            <Video/>
             <Comments/>
             <Footer/>
         </div>
