@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <div className={classes.HomePage}>
             <Video/>
-        <BackgroundSpot/>
+            <BackgroundSpot/>
         </div>
     )
 }
