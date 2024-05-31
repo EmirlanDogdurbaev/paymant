@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {signup} from "../../../store/slices/authSlice.js";
+import {useNavigate} from "react-router-dom";
 
 const Signup = () => {
     const dispatch = useDispatch();
@@ -9,17 +10,19 @@ const Signup = () => {
     const loading = useSelector((state) => state.auth.status === "loading");
     const error = useSelector((state) => state.auth.error);
     const token = useSelector((state) => state.auth.token);
-
+    const navigate = useNavigate();
     const handleSignup = () => {
         dispatch(signup({password, email}));
+        navigate("/");
     };
+
 
     if (token) {
         return null;
     }
 
     return (
-        <div style={{ marginTop: "48px" }}>
+        <div style={{marginTop: "48px"}}>
             <div>
                 <h2>Signup</h2>
 
