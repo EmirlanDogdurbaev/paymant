@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className={classes.HomePage}>
             <Hero/>
             <About/>
-            <Tools/>
+             <Tools/>
             <HowItWorks/>
             <Comments/>
             <Footer/>
