@@ -3,7 +3,7 @@
     padding: 50px 0px;
     border-radius: 8px;
     width: 1100px;
-    margin: 20px auto;
+    margin: 40px auto 100px;
     text-align: center;
     height: 100vh;
 
@@ -82,4 +82,44 @@
             }
         }
     }
+    @media (max-width: 820px) {
+        
+        h2 {
+            font-size: 28px;
+            padding: 8px 15px;
+        }
+
+        .p {
+            font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+
+        .steps {
+            flex-direction: column;  /* Stack steps vertically */
+            align-items: center;     /* Center steps horizontally */
+
+            .step {
+                max-width: 100%;
+                margin-bottom: 20px;
+
+                .stepnumber {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                }
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
 }
+
