@@ -27,7 +27,7 @@ const Hero = () => {
                         <button className={cl.Hero__btn}>Начать сейчас</button>
                     </div>
                     
-                    {/* <motion.div 
+                    <motion.div 
                         className={cl.Hero__images}
                         initial="hidden"
                         animate="visible"
@@ -36,32 +36,32 @@ const Hero = () => {
                         <motion.img 
                             src={tablet} 
                             alt="Tablet" 
-                            className={cl.Hero__image}
+                            className={cl.Hero__tablet}
                             variants={imageVariants}
                             transition={{ duration: 0.5 }}
                         />
                         <motion.img 
                             src={cylinder} 
                             alt="Cylinder" 
-                            className={cl.Hero__image}
+                            className={cl.Hero__cylinder}
                             variants={imageVariants}
                             transition={{ duration: 0.5 }}
                         />
                         <motion.img 
                             src={icosahedron} 
                             alt="Icosahedron" 
-                            className={cl.Hero__image}
+                            className={cl.Hero__iso}
                             variants={imageVariants}
                             transition={{ duration: 0.5 }}
                         />
                         <motion.img 
                             src={mobile} 
                             alt="Mobile" 
-                            className={cl.Hero__image}
+                            className={cl.Hero__mobile}
                             variants={imageVariants}
                             transition={{ duration: 0.5 }}
                         />
-                    </motion.div> */}
+                    </motion.div>
                 </div>
             </div>
         </section>
