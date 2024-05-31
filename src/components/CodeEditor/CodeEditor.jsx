@@ -3,12 +3,11 @@ import Editor from '@monaco-editor/react';
 import './style.css';
 
 const CodeEditor = () => {
-    const [code, setCode] = useState('console.log "oO08 iIlL1 g9qCGQ ~-+=>";\n' + '\n' + '\n' + 'function updateGutters(cm) {\n' + '    var gutters = cm.display.gutters,\n' + '        __specs = cm.options.gutters;\n' + '\n' + '    removeChildren(gutters);\n' + '\n' + '    for (var i = 0; i < specs.length; ++i) {\n' + '        var gutterClass = __specs[i];\n' + '        var gElt = gutters.appendChild(\n' + '            elt(\n' + '                "div",\n' + '                null,\n' + '                "CodeMirror-gutter " + gutterClass\n' + '            )\n' + '        );\n' + '        if (gutterClass == "CodeMirror-linenumbers") {\n' + '            cm.display.lineGutter = gElt;\n' + '            gElt.style.width = (cm.display.lineNumWidth || 1) + "px";\n' + '        }\n' + '    }\n' + '    gutters.style.display = i ? "" : "none";\n' + '    updateGutterSpace(cm);\n' + '\n' + '    return false;\n' + '}\n');
+    const [code, setCode] = useState('console.log("oO08 iIlL1 g9qCGQ ~-+=>");\n' + '\n' + '\n' + 'function updateGutters(cm) {\n' + '    var gutters = cm.display.gutters,\n' + '        __specs = cm.options.gutters;\n' + '\n' + '    removeChildren(gutters);\n' + '\n' + '    for (var i = 0; i < specs.length; ++i) {\n' + '        var gutterClass = __specs[i];\n' + '        var gElt = gutters.appendChild(\n' + '            elt(\n' + '                "div",\n' + '                null,\n' + '                "CodeMirror-gutter " + gutterClass\n' + '            )\n' + '        );\n' + '        if (gutterClass == "CodeMirror-linenumbers") {\n' + '            cm.display.lineGutter = gElt;\n' + '            gElt.style.width = (cm.display.lineNumWidth || 1) + "px";\n' + '        }\n' + '    }\n' + '    gutters.style.display = i ? "" : "none";\n' + '    updateGutterSpace(cm);\n' + '\n' + '    return false;\n' + '}\n');
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [copyMessage, setCopyMessage] = useState('');
     const editorRef = useRef(null);
     const containerRef = useRef(null);
-
 
     const handleEditorChange = (value) => {
         setCode(value);
@@ -65,7 +64,7 @@ const CodeEditor = () => {
         </div>
         {copyMessage && <p className="copy-message">{copyMessage}</p>}
         <Editor
-            height="700px "
+            height="560px "
             defaultLanguage="javascript"
             value={code}
             onChange={handleEditorChange}

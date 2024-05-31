@@ -1,5 +1,4 @@
-$blackColor:  #161C2D; ;
-
+$blackColor: #161C2D;
 
 .Tools {
   height: 100vh;
@@ -14,7 +13,6 @@ $blackColor:  #161C2D; ;
     gap: 100px;
     justify-content: space-between;
 
-
     .text__cont {
       display: flex;
       flex-direction: column;
@@ -26,7 +24,7 @@ $blackColor:  #161C2D; ;
         font-size: 48px;
         font-weight: 700;
         line-height: 58px;
-        letter-spacing: -1.7999999523162842px;
+        letter-spacing: -1.8px;
         text-align: left;
       }
 
@@ -37,7 +35,6 @@ $blackColor:  #161C2D; ;
         line-height: 32px;
         letter-spacing: -0.5px;
         text-align: left;
-
       }
 
       p {
@@ -45,14 +42,15 @@ $blackColor:  #161C2D; ;
         font-size: 17px;
         font-weight: 400;
         line-height: 29px;
-        letter-spacing: -0.20000000298023224px;
+        letter-spacing: -0.2px;
         text-align: left;
       }
 
-      span{
+      span {
         display: flex;
         flex-direction: column;
         gap: 25px;
+
         h6 {
           color: $blackColor;
           font-family: Open Sans;
@@ -61,7 +59,6 @@ $blackColor:  #161C2D; ;
           line-height: 32px;
           letter-spacing: -0.5px;
           text-align: left;
-
         }
 
         p {
@@ -69,12 +66,94 @@ $blackColor:  #161C2D; ;
           font-size: 17px;
           font-weight: 400;
           line-height: 29px;
-          letter-spacing: -0.20000000298023224px;
+          letter-spacing: -0.2px;
           text-align: left;
         }
-
       }
     }
   }
+}
 
+/* Адаптация под планшеты */
+@media (max-width: 768px) {
+  .Tools {
+
+
+    > section {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+
+      .text__cont {
+
+        padding-top: 30px;
+        gap: 10px;
+
+        > h3 {
+          font-size: 34px;
+          line-height: 44px;
+
+        }
+
+        h5 {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: -0.4px;
+        }
+
+        p, span p {
+          font-size: 15px;
+          line-height: 24px;
+        }
+
+        span {
+          gap: 10px;
+        }
+
+        span h6 {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: -0.4px;
+        }
+      }
+    }
+  }
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 480px) {
+  .Tools > section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 10px;
+
+    .text__cont {
+      > h3 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1.2px;
+      }
+
+      h5 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+      }
+
+      p, span p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.1px;
+      }
+
+      span h6 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.3px;
+      }
+    }
+  }
 }
