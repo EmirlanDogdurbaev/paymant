@@ -1,4 +1,3 @@
-import Video from '../../components/Video/Video'
 import classes from './HomePage.module.scss'
 import Hero from "../../components/Hero/Hero.jsx";
 import About from "../../components/About/About.jsx";
@@ -15,7 +14,7 @@ const HomePage = () => {
              <Tools/>
             <HowItWorks/>
             <Comments/>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
