@@ -20,11 +20,6 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li className={classes.navbar__item}>
-                    <Link className={classes.navbar__link} to="/">
-                        testing
-                    </Link>
-                </li>
-                <li className={classes.navbar__item}>
                     <Link className={classes.login} to="/">
                         Войти
                     </Link>
