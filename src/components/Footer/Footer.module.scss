@@ -1,9 +1,9 @@
 .footer {
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px 15%;
+    padding: 20px 0;
 
     .copyright {
         font-size: 14px;

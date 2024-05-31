@@ -1,15 +1,18 @@
 import Video from '../components/Video/Video'
 import classes from './HomePage.module.scss'
-import BackgroundSpot from '../components/BackgroundSpot/BackgroundSpot'
 import Footer from '../components/Footer/Footer'
 import Hero from '../components/Hero/Hero'
+import HowItWorks from '../components/HowItWorks/HowItWorks'
+import Comments from '../components/Comments/Comments'
 
 const HomePage = () => {
     return (
         <div className={classes.HomePage}>
             <Hero/>
+            
+            <HowItWorks/>
             <Video/>
-            <BackgroundSpot/>
+            <Comments/>
             <Footer/>
         </div>
     )
