@@ -36,7 +36,6 @@ const Nav = () => {
                 <Menu
                     right
                     customBurgerIcon={<img src={burger} alt="Menu" />}
-                    customCrossIcon={<img src={closer} alt="Close" />}
                 >
                     <Link id="home" className="menu-item" to="/">
                         Главная
