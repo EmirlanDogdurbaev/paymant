@@ -14,7 +14,6 @@ const HomePage = () => {
             <About/>
             <Tools/>
             <HowItWorks/>
-            <Video/>
             <Comments/>
             <Footer/>
         </div>

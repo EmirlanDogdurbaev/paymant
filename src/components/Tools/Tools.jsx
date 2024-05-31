@@ -17,7 +17,6 @@ const Tools = () => {
                     </span>
                 </aside>
                 <div className={classes.img__cont}>
-                    {/*<img src="./Card.png" alt="card image"/>*/}
                     <CodeEditor/>
                 </div>
 

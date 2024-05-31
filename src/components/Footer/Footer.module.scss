@@ -26,3 +26,13 @@
         color: red;
     }
 }
+
+@media screen and (max-width:500px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+}
