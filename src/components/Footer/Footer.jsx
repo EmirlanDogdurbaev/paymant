@@ -2,8 +2,8 @@ import cl from "./Footer.module.scss"
 
 const Footer = () => {
   return (
-    <div>
       <footer className={cl.footer}>
+
         <div className={cl.copyright}>
           © 2024 Copyright, All Right Reserved, Made by Ilya Yugai with{" "}
           <span className={cl.heart}>❤️</span>
@@ -22,8 +22,8 @@ const Footer = () => {
             💼
           </a>
         </div>
+
       </footer>
-    </div>
   );
 };
 
