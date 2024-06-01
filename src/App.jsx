@@ -7,6 +7,7 @@ import Signup from "./module/Auth/Signup/Signup.jsx";
 import Login from "./module/Auth/Login/Login.jsx";
 import Logout from "./module/Auth/Logout/Logout.jsx";
 import ResetPassword from "./module/Auth/ResetPassword/ResetPassword.jsx";
+import AppDetail from "./pages/TransactionPage/AppDetail.jsx";
 
 function App() {
     const isAuthenticated = localStorage.getItem("access_token");
@@ -16,6 +17,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 {isAuthenticated && <Route path="/transaction" element={<TransactionPage/>}/>}
+                {isAuthenticated && <Route path="/app/:id" element={<AppDetail/>}/>}
                 <Route path="/signup" element={<Signup/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/logout" element={<Logout/>}/>
