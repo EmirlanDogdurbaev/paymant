@@ -1,9 +1,42 @@
-# React + Vite
+# Фронтенд для Payment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот репозиторий содержит фронтенд код для приложения Payment, разработанного с использованием React и Vite.
 
-Currently, two official plugins are available:
+## Содержание
+- [Начало работы](#начало-работы)
+- [Структура проекта](#структура-проекта)
+- [Доступные скрипты](#доступные-скрипты)
+- [Зависимости](#зависимости)
+- [Вклад в проект](#вклад-в-проект)
+- [Лицензия](#лицензия)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# paymant
+## Начало работы
+
+Для локального запуска выполните следующие шаги.
+
+### Предварительные требования
+
+Убедитесь, что у вас установлены:
+- Node.js
+- npm (Node Package Manager)
+
+### Установка
+
+1. Клонируйте репозиторий:
+    ```sh
+    git clone https://github.com/EmirlanDogdurbaev/payment.git
+    ```
+2. Перейдите в директорию проекта:
+    ```sh
+    cd payment
+    ```
+3. Установите зависимости:
+    ```sh
+    npm install
+    ```
+
+### Запуск приложения
+
+Для запуска сервера разработки:
+```sh
+npm run dev
