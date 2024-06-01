@@ -3,21 +3,30 @@ import AppCard from "../../components/AppCard/AppCard";
 import classes from './TransactionPage.module.scss'
 import axios from "axios";
 import {api} from "../../store/slices/authSlice.js";
-import Transaction from "../../components/Transaction/Transaction/Transaction.jsx";
+import {token} from "../../store/slices/transactionSlice.js";
+import AppsCreate from "../../components/Apps/AppsCreate/AppsCreate.jsx";
 
-export default function TransactionPage() {
+function TransactionPage() {
     const [apps, setApps] = useState([]);
     const [data, setData] = useState([]);
 
+
     useEffect(() => {
-        try {
-            axios.get(`${api}/app/all`).then((res) => {
-                setApps(res.data);
-            })
-        } catch (err) {
-            console.log(err);
-        }
-    }, []);
+        const fetchApps = async () => {
+            try {
+                const response = await axios.get(`${api}/app/all`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setApps(response.data);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+
+        fetchApps();
+    }, [api, token]);
 
     console.log(apps)
 
@@ -31,9 +40,13 @@ export default function TransactionPage() {
                 })}
             </div>
 
-            {/*<div>*/}
-            {/*    <Transaction/>*/}
-            {/*</div>*/}
+
+
+
+            <AppsCreate/>
+
         </div>
     );
 }
+
+export default TransactionPage
