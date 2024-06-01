@@ -11,7 +11,6 @@ const Nav = () => {
         setIsMenuActive((prevState) => !prevState);
     };
 
-
     return (
         <nav className={classes.navbar}>
             <ul className={`${classes.navbar__list} ${isMenuActive ? classes.active : ''}`}>
@@ -21,7 +20,7 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li className={classes.navbar__item}>
-                    <Link className={classes.navbar__link} to="/transaction" onClick={toggleMenuHandler}>
+                    <Link className={classes.navbar__link} to="/about" onClick={toggleMenuHandler}>
                         О нас
                     </Link>
                 </li>
@@ -30,6 +29,15 @@ const Nav = () => {
                         Контакты
                     </Link>
                 </li>
+                {
+                    localStorage.getItem("access_token") ? (
+                        <li className={classes.navbar__item}>
+                            <Link className={classes.navbar__link} to="/transaction" onClick={toggleMenuHandler}>
+                                Транзакции
+                            </Link>
+                        </li>
+                    ) : null
+                }
                 <li className={classes.navbar__item}>
                     {
                         localStorage.getItem("access_token") ? (

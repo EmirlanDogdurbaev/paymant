@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { signup } from "../../../store/slices/authSlice.js";
-import {Link, useNavigate} from "react-router-dom";
+import React, {useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {signup} from "../../../store/slices/authSlice.js";
+import {useNavigate} from "react-router-dom";
 import styles from "./Signup.module.scss";
 
 const Signup = () => {
@@ -14,7 +14,7 @@ const Signup = () => {
     const navigate = useNavigate();
 
     const handleSignup = () => {
-        dispatch(signup({ password, email }));
+        dispatch(signup({password, email}));
         navigate("/");
     };
 
