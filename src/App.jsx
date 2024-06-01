@@ -13,7 +13,6 @@ function App() {
     const isAuthenticated = localStorage.getItem("access_token");
     return (<>
         <Layout>
-
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 {isAuthenticated && <Route path="/transaction" element={<TransactionPage/>}/>}

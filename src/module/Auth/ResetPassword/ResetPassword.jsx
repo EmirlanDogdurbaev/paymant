@@ -51,36 +51,40 @@ const ResetPassword = () => {
     }
 
     return (<div className={styles.resetPasswordContainer}>
-            <h1>Reset Password</h1>
+        <h1>Reset Password</h1>
+        <form onSubmit={getToken}>
+            <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+                <label>Email: </label>
 
-            <form onSubmit={getToken}>
-                <label>Email:</label>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input type="email" style={{marginBottom: "10px"}} value={email}
+                       onChange={(e) => setEmail(e.target.value)}/>
 
-                <button type={"submit"}>get token</button>
-            </form>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>New Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <div>
-                    <label>Confirm Password:</label>
-                    <input
-                        type="password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                    />
-                </div>
-                <button type="submit">Reset Password</button>
-            </form>
-            {message &&
-                <p className={message === 'Password reset successful' ? styles.success : styles.error}>{message}</p>}
-        </div>);
+                <button type={"submit"} style={{height: "40px", width: "100%"}}>Submit</button>
+
+            </div>
+        </form>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>New Password:</label>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
+            <div>
+                <label>Confirm Password:</label>
+                <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+            </div>
+            <button type="submit" style={{width: "400px"}}>Reset Password</button>
+        </form>
+        {message &&
+            <p className={message === 'Password reset successful' ? styles.success : styles.error}>{message}</p>}
+    </div>);
 };
 
 export default ResetPassword;
