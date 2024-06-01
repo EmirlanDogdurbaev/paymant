@@ -1,9 +1,11 @@
-import './App.css'
-import {Route, Routes} from "react-router-dom";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./module/Layout/Layout.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";
 import TransactionPage from './pages/TransactionPage/TransactionPage.jsx';
 import Signup from "./module/Auth/Signup/Signup.jsx";
+import Login from "./module/Auth/Login/Login.jsx";
+import Logout from "./module/Auth/Logout/Logout.jsx";
 
 function App() {
 
@@ -14,10 +16,12 @@ function App() {
                     <Route path="/" exact element={<HomePage/>}/>
                     <Route path="/transaction" exact element={<TransactionPage/>}/>
                     <Route path="/signup" element={<Signup/>}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/logout" element={<Logout/>}/>
                 </Routes>
             </Layout>
         </>
     )
 }
 
-export default App
+export default App;

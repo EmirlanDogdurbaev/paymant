@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Link, useNavigate} from "react-router-dom";
+import {login} from "../../../store/slices/authSlice.js";
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -20,12 +21,10 @@ const Login = () => {
         });
     };
 
-
     return (
-        <div className={cl.Login}>
+        <div>
             <div>
                 <h2>Войти</h2>
-
                 <input
                     type="email"
                     placeholder="Email"
