@@ -1,7 +1,8 @@
-import {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {signup} from "../../../store/slices/authSlice.js";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { signup } from "../../../store/slices/authSlice.js";
+import {Link, useNavigate} from "react-router-dom";
+import styles from "./Signup.module.scss";
 
 const Signup = () => {
     const dispatch = useDispatch();
@@ -11,42 +12,47 @@ const Signup = () => {
     const error = useSelector((state) => state.auth.error);
     const token = useSelector((state) => state.auth.token);
     const navigate = useNavigate();
+
     const handleSignup = () => {
-        dispatch(signup({password, email}));
+        dispatch(signup({ password, email }));
         navigate("/");
     };
-
 
     if (token) {
         return null;
     }
 
     return (
-        <div style={{marginTop: "48px"}}>
-            <div>
-                <h2>Signup</h2>
-
+        <div className={styles.signupContainer}>
+            <div className={styles.signupForm}>
+                <h2 className={styles.signupTitle}>Signup</h2>
                 <input
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className={styles.signupInput}
                 />
                 <input
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className={styles.signupInput}
                 />
-                <button
-                    onClick={() => {
-                        handleSignup();
-                    }}
-                    disabled={loading}
-                >
-                    {loading ? "Loading..." : "Signup"}
-                </button>
-                {error && <p>Error: {error}</p>}
+
+
+                <div className={styles.linkContainer}>
+                    <button
+                        onClick={handleSignup}
+                        disabled={loading}
+                        className={styles.signupButton}
+                    >
+                        {loading ? "Загрузка..." : "Войти"}
+                    </button>
+                    <Link to="/signup" className={styles.registerLink}>Регистрация</Link>
+                </div>
+                {error && <p className={styles.signupError}>Error: {error}</p>}
             </div>
         </div>
     );

@@ -1,7 +1,8 @@
-import {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {Link, useNavigate} from "react-router-dom";
-import {login} from "../../../store/slices/authSlice.js";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { login } from "../../../store/slices/authSlice.js";
+import styles from "./Login.module.scss";
 
 const Login = () => {
     const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Login = () => {
     const error = useSelector((state) => state.auth.error);
 
     const handleLogin = () => {
-        dispatch(login({password, email})).then((response) => {
+        dispatch(login({ password, email })).then((response) => {
             if (response.meta.requestStatus === 'fulfilled') {
                 navigate("/register");
             } else {
@@ -22,28 +23,34 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <div>
-                <h2>Войти</h2>
+        <div className={styles.loginContainer}>
+            <div className={styles.loginForm}>
+                <h2 className={styles.loginTitle}>Войти</h2>
                 <input
                     type="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    className={styles.loginInput}
                 />
                 <input
                     type="password"
                     placeholder="пароль"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    className={styles.loginInput}
                 />
-                <span>
-                    <button onClick={handleLogin} disabled={loading}>
+                <div className={styles.linkContainer}>
+                    <button
+                        onClick={handleLogin}
+                        disabled={loading}
+                        className={styles.loginButton}
+                    >
                         {loading ? "Загрузка..." : "Войти"}
                     </button>
-                    <Link to="/register">Регистрация</Link>
-                </span>
-                {error && <p>Error: {error}</p>}
+                    <Link to="/login" className={styles.registerLink}>Login</Link>
+                </div>
+                {error && <p className={styles.loginError}>Error: {error}</p>}
             </div>
         </div>
     );

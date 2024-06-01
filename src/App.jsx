@@ -6,6 +6,7 @@ import TransactionPage from './pages/TransactionPage/TransactionPage.jsx';
 import Signup from "./module/Auth/Signup/Signup.jsx";
 import Login from "./module/Auth/Login/Login.jsx";
 import Logout from "./module/Auth/Logout/Logout.jsx";
+import ResetPassword from "./module/Auth/ResetPassword/ResetPassword.jsx";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/signup" element={<Signup/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/logout" element={<Logout/>}/>
+                    <Route path="/reset_password" element={<ResetPassword/>}/>
                 </Routes>
             </Layout>
         </>
