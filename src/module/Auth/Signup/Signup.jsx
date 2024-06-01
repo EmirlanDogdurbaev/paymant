@@ -50,7 +50,6 @@ const Signup = () => {
                     >
                         {loading ? "Загрузка..." : "Войти"}
                     </button>
-                    <Link to="/signup" className={styles.registerLink}>Регистрация</Link>
                 </div>
                 {error && <p className={styles.signupError}>Error: {error}</p>}
             </div>

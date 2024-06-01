@@ -21,7 +21,7 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li className={classes.navbar__item}>
-                    <Link className={classes.navbar__link} to="/about" onClick={toggleMenuHandler}>
+                    <Link className={classes.navbar__link} to="/transaction" onClick={toggleMenuHandler}>
                         О нас
                     </Link>
                 </li>

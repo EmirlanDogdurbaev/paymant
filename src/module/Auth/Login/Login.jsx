@@ -48,7 +48,6 @@ const Login = () => {
                     >
                         {loading ? "Загрузка..." : "Войти"}
                     </button>
-                    <Link to="/login" className={styles.registerLink}>Login</Link>
                 </div>
                 {error && <p className={styles.loginError}>Error: {error}</p>}
             </div>
