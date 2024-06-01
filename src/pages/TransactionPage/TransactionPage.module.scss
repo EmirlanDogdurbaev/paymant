@@ -1,7 +1,12 @@
 .TransactionPage {
+  max-width: 80%;
+  margin: 0 auto;
   .apps {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     flex-wrap: wrap;
+    img{
+      margin-left: 15px;
+    }
   }
 }
