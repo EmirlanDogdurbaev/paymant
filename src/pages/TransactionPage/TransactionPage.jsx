@@ -83,3 +83,5 @@ export default function TransactionPage() {
     </div>
   );
 }
+
+export default TransactionPage
