@@ -4,6 +4,7 @@ import classes from "./TransactionPage.module.scss";
 import axios from "axios";
 import { api } from "../../store/slices/authSlice.js";
 import { Table } from "antd";
+import AppsCreate from "../../components/Apps/AppsCreate/AppsCreate.jsx";
 
 export default function TransactionPage() {
   const [apps, setApps] = useState([]);
@@ -79,6 +80,7 @@ export default function TransactionPage() {
           return <AppCard key={index} data={app} />;
         })}
       </div>
+        <AppsCreate/>
       <Table dataSource={newTransactions} columns={columns} />
     </div>
   );

@@ -7,6 +7,7 @@ import Signup from "./module/Auth/Signup/Signup.jsx";
 import Login from "./module/Auth/Login/Login.jsx";
 import Logout from "./module/Auth/Logout/Logout.jsx";
 import ResetPassword from "./module/Auth/ResetPassword/ResetPassword.jsx";
+import AppDetail from "./pages/TransactionPage/AppDetail.jsx";
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
             <Layout>
                 <Routes>
                     <Route path="/" exact element={<HomePage/>}/>
-                    <Route path="/transaction" exact element={<TransactionPage/>}/>
+                    <Route path="/transaction" element={<TransactionPage/>}/>
+                    <Route path="/app/:id" element={<AppDetail/>}/>
                     <Route path="/signup" element={<Signup/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/logout" element={<Logout/>}/>
