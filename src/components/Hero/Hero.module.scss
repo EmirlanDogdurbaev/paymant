@@ -77,7 +77,7 @@
     &__cylinder {
         position: absolute;
         z-index: 20;
-        top: 60%;
+        top: 70%;
         left: 32%;
         width: 150px;
         rotate: -7deg;
@@ -89,6 +89,49 @@
         top: 15%;
         width: 95px;
         right: 10%;
+    }
+
+    @media (max-width: 1400px){
+        &__inner{
+            height: 900px;
+        }
+
+        &__title{
+            font-size: 65px;
+
+            .pink{
+                font-size: 52px;
+            }
+        }
+
+        &__text{
+            margin: 30px 0 15px;
+        }
+
+        &__btn{
+            font-size: 20px;
+        }
+
+        &__tablet{
+            width: 760px;
+            top: 22%;
+        }
+
+        &__mobile{
+            width: 200px;
+            top: 40%;
+        }
+
+        &__cylinder{
+            width: 100px;
+            top: 64%;
+        }
+
+        &__iso{
+            width: 72px;
+            right: 5%;
+            top: 17%;
+        }
     }
 
     @media (max-width: 820px) {
@@ -134,6 +177,7 @@
             top: 0;
             left: 0;
             z-index: -10;
+            display: none;
         }
 
         &__mobile {
@@ -154,3 +198,4 @@
         }
     }
 }
+

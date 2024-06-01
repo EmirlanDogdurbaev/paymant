@@ -56,6 +56,13 @@
     padding: 10px;
 }
 
+@media (max-width: 1400px) {
+    .editor-container {
+        width: 580px;
+        height: 500;
+    }
+}
+
 @media (max-width: 768px) {
     .editor-container {
         width: 480px;

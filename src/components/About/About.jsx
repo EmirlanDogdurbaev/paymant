@@ -40,7 +40,7 @@ const About = () => {
             src={payment}
             alt="mobile"
             className={cl.About__image}
-            style={{ width: '750px' }}
+            
             initial={{ opacity: 0, x: -50 }}
             animate={isImage1InView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.5, delay: 0.3 }}
